@@ -298,10 +298,10 @@ Write a function named extractChildren that, given the array of characters from 
 const extractChildren = (arr) => {
   return arr.reduce((acc, char) => {
     if (char.name.includes('a') && char.children) {
-      acc.push(char.children);
+      acc = acc.concat(char.children);
     }
     return acc;
-  }, []).flat()
+  }, [])
 };
 
 /* ------------------------------------------------------------------------------------------------
