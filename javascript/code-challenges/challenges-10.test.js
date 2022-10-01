@@ -80,16 +80,10 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-  let cookies = stores.flat();
-  const totals = [];
-  for (let i = 0; i < 12; i++) {
-    let row = 0;
-    for (let j = i; j < cookies.length; j += 12) {
-      row += cookies[j];
-    }
-    totals.push(row);
-  }
-  return totals;
+  return stores.reduce((acc, arr) => {
+    arr.forEach((num, idx) => acc[idx] += num);
+    return acc;
+  }, new Array(12).fill(0))
 };
 
 /* ------------------------------------------------------------------------------------------------
