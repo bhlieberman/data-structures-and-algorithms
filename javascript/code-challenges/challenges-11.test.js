@@ -55,7 +55,7 @@ const totalSum = (input) => {
     if (typeof itm === 'number') acc += itm;
     else if (typeof itm === 'object') acc += totalSum(itm);
     return acc;
-  }, 0)
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
