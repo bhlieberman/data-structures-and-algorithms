@@ -23,3 +23,4 @@ To run your tests
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 [arrayReverseREADME](arrayReverse/README.md)
 [arrayInsertREADME](arrayReverse/arrayInsertREADME.md)
+[arrayBinarySearchREADME](arrayReverse/arrayBinarySearch.md)
