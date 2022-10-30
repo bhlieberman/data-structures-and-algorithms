@@ -22,7 +22,7 @@ public class LinkedList
     this.head = value;
   }
 
-  public Boolean includes(Node value) {
+  public boolean includes(Node value) {
     Node current = this.head;
     while (current != null) {
       if (current == value) return true;
