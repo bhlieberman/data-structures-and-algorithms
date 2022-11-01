@@ -2,8 +2,6 @@ package datastructures.linkedlist;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Objects;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest
@@ -55,6 +53,26 @@ public class LinkedListTest
       LinkedList ll = new LinkedList(n, nx);
       ll.insert(new Node(2));
       assertFalse(ll.includes(new Node(16)));
+    }
+
+    @Test void testAppend() {
+      LinkedList ll = new LinkedList(new Node(42), new Node(65));
+      ll.append(72);
+      assert(ll.head.next.next.getValue() == 72);
+    }
+
+    @Test void testInsertBefore() {
+      LinkedList ll = new LinkedList();
+      ll.insert(new Node(3));
+      ll.insert(new Node(15));
+      ll.insertBefore(15, 7);
+      assert(ll.head.next.getValue() == 7);
+    }
+
+    @Test void testInsertAfter() {
+      LinkedList ll = new LinkedList(new Node(1), new Node(2));
+      ll.insertAfter(2, 3);
+      assert(ll.head.next.next.getValue() == 3);
     }
 
     @Test void testToStringImpl() {
