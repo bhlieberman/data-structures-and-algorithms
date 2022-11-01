@@ -38,6 +38,32 @@ public class LinkedList
     current.next = n;
   }
 
+  public LinkedList reverse() {
+    Node current = this.head;
+    Node prev = null;
+    Node temp;
+    while (current != null) {
+      temp = current.next;
+      current.next = prev;
+      prev = current;
+      current = temp;
+    }
+    this.head = prev;
+    return this;
+  }
+
+  public int kthFromEnd(int k) {
+    LinkedList ll = this.reverse();
+    Node current = ll.head;
+    int i = 0;
+    while (i <= k - 1) {
+      if (current.getValue() == k) break;
+      current = current.next;
+      i++;
+    }
+    return current.getValue();
+  }
+
   public void append(int value) {
     Node n = new Node(value);
     if (this.head.next == null) this.head.next = n;
