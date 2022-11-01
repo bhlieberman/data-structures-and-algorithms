@@ -3,6 +3,7 @@ package datastructures.linkedlist;
 public class LinkedList
 {
   public Node head;
+  public Node tail;
 
   public LinkedList() {
     this.head = null;
@@ -20,6 +21,31 @@ public class LinkedList
   public void insert(Node value) {
     value.next = this.head;
     this.head = value;
+  }
+
+  public void insertBefore(int existingValue, int newValue) {
+    Node current = this.head;
+    while (current.getValue() != existingValue) current = current.next;
+    Node n = new Node(newValue);
+    n.next = current.next;
+    current.next = n;
+  }
+
+  public void insertAfter(int existingValue, int newValue) {
+    Node current = this.head;
+    while (current.getValue() != existingValue) current = current.next;
+    Node n = new Node(newValue);
+    current.next = n;
+  }
+
+  public void append(int value) {
+    Node n = new Node(value);
+    if (this.head.next == null) this.head.next = n;
+    else {
+      Node current = this.head;
+      while (current.next != null) current = current.next;
+      current.next = n;
+    }
   }
 
   public boolean includes(Node value) {
