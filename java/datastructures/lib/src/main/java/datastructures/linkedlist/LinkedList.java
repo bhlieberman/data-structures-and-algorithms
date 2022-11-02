@@ -53,15 +53,13 @@ public class LinkedList
   }
 
   public int kthFromEnd(int k) {
+    if (k < 0) throw new IllegalArgumentException("can't find negative index of a list");
     LinkedList ll = this.reverse();
     Node current = ll.head;
-    int i = 0;
-    while (i <= k - 1) {
-      if (current.getValue() == k) break;
+    for (int i = 0; i < k; i++) {
       current = current.next;
-      i++;
     }
-    return current.getValue();
+    return current == null ? -1 : current.getValue();
   }
 
   public void append(int value) {

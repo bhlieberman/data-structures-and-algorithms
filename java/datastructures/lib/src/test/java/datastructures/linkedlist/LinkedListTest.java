@@ -96,13 +96,13 @@ public class LinkedListTest
     LinkedList ll = new LinkedList(new Node(1), new Node(3));
     ll.insertAfter(3, 8);
     ll.insertAfter(8, 2);
-    assertEquals(3, ll.kthFromEnd(2));
+    assertEquals(8, ll.kthFromEnd(1));
   }
   @Test void testKthSameLength() {
     LinkedList ll = new LinkedList(new Node(1), new Node(3));
     ll.insertAfter(3, 8);
     ll.insertAfter(8, 2);
-    assertEquals(1, ll.kthFromEnd(4));
+    assertEquals(1, ll.kthFromEnd(3));
   }
 
     @Test void testKthFromEndThrows() {
@@ -110,6 +110,13 @@ public class LinkedListTest
       ll.insertAfter(3, 8);
       ll.insertAfter(8, 2);
       assertThrows(NullPointerException.class, () -> ll.kthFromEnd(6));
+    }
+
+    @Test void testKthFromEndIllegalArg() {
+      LinkedList ll = new LinkedList(new Node(1), new Node(3));
+      ll.insertAfter(3, 8);
+      ll.insertAfter(8, 2);
+      assertThrows(IllegalArgumentException.class, () -> ll.kthFromEnd(-1));
     }
 
     @Test void testToStringImpl() {
