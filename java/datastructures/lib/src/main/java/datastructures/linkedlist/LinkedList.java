@@ -38,6 +38,30 @@ public class LinkedList
     current.next = n;
   }
 
+  public LinkedList reverse() {
+    Node current = this.head;
+    Node prev = null;
+    Node temp;
+    while (current != null) {
+      temp = current.next;
+      current.next = prev;
+      prev = current;
+      current = temp;
+    }
+    this.head = prev;
+    return this;
+  }
+
+  public int kthFromEnd(int k) {
+    if (k < 0) throw new IllegalArgumentException("can't find negative index of a list");
+    LinkedList ll = this.reverse();
+    Node current = ll.head;
+    for (int i = 0; i < k; i++) {
+      current = current.next;
+    }
+    return current == null ? -1 : current.getValue();
+  }
+
   public void append(int value) {
     Node n = new Node(value);
     if (this.head.next == null) this.head.next = n;

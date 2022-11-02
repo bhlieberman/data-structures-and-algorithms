@@ -75,6 +75,50 @@ public class LinkedListTest
       assert(ll.head.next.next.getValue() == 3);
     }
 
+
+    @Test void reverseLinkedList() {
+      LinkedList ll = new LinkedList(new Node(1), new Node(2));
+      ll.insertAfter(2, 3);
+      LinkedList back = ll.reverse();
+      LinkedList comp = new LinkedList(new Node(3), new Node(2));
+      comp.insertAfter(2, 1);
+      assertEquals(comp.toString(), back.toString());
+    }
+
+    @Test void testKthFromEnd() {
+      LinkedList ll = new LinkedList(new Node(1), new Node(3));
+      ll.insertAfter(3, 8);
+      ll.insertAfter(8, 2);
+      assertEquals(2, ll.kthFromEnd(0));
+    }
+
+  @Test void testKthFromEndMiddleVal() {
+    LinkedList ll = new LinkedList(new Node(1), new Node(3));
+    ll.insertAfter(3, 8);
+    ll.insertAfter(8, 2);
+    assertEquals(8, ll.kthFromEnd(1));
+  }
+  @Test void testKthSameLength() {
+    LinkedList ll = new LinkedList(new Node(1), new Node(3));
+    ll.insertAfter(3, 8);
+    ll.insertAfter(8, 2);
+    assertEquals(1, ll.kthFromEnd(3));
+  }
+
+    @Test void testKthFromEndThrows() {
+      LinkedList ll = new LinkedList(new Node(1), new Node(3));
+      ll.insertAfter(3, 8);
+      ll.insertAfter(8, 2);
+      assertThrows(NullPointerException.class, () -> ll.kthFromEnd(6));
+    }
+
+    @Test void testKthFromEndIllegalArg() {
+      LinkedList ll = new LinkedList(new Node(1), new Node(3));
+      ll.insertAfter(3, 8);
+      ll.insertAfter(8, 2);
+      assertThrows(IllegalArgumentException.class, () -> ll.kthFromEnd(-1));
+    }
+
     @Test void testToStringImpl() {
       Node n = new Node(3);
       Node nx = new Node(4);
