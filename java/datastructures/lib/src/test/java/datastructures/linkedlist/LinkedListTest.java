@@ -119,6 +119,16 @@ public class LinkedListTest
       assertThrows(IllegalArgumentException.class, () -> ll.kthFromEnd(-1));
     }
 
+    @Test void testZipLinkedList() {
+      LinkedList sut = new LinkedList();
+      LinkedList sut1 = new LinkedList();
+      for (int i = 10; i < 60; i += 10) {
+        sut.insert(new Node(i));
+        sut1.insert(new Node(i));
+      }
+      assertEquals("{50}->{50}->{40}->{40}->{30}->{30}->{20}->{20}->{10}->{10}->NULL", LinkedList.zipLinkedList(sut, sut1).toString());
+    }
+
     @Test void testToStringImpl() {
       Node n = new Node(3);
       Node nx = new Node(4);
