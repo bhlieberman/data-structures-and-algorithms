@@ -81,6 +81,27 @@ public class LinkedList
     return false;
   }
 
+  public static LinkedList zipLinkedList(LinkedList a, LinkedList b) {
+    Node i = a.head;
+    Node j = b.head;
+    Node tmpi = i.next;
+    Node tmpj = j.next;
+
+    while (tmpi != null || tmpj != null) {
+      i.next = j;
+      j.next = tmpi;
+
+      i = tmpi;
+      tmpi = tmpi.next;
+
+      j = tmpj;
+      tmpj = tmpj.next;
+    }
+    i.next = j;
+    j.next = null;
+    return a;
+  }
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
