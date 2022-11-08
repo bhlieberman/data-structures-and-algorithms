@@ -4,4 +4,4 @@ This queue is implemented using two stacks. The basic algorithm consists of push
 
 See this visualization:
 
-![Visualization]("../../../../../pseudoqueueViz.png")
+![Visualization]("https://github.com/bhlieberman/data-structures-and-algorithms/blob/main/java/datastructures/pseudoqueueViz.png")
