@@ -4,4 +4,4 @@ This queue is implemented using two stacks. The basic algorithm consists of push
 
 See this visualization:
 
-![Visualization]("datastructures/pseudoqueueViz.png")
+![Visualization]("../../../../../pseudoqueueViz.png")
