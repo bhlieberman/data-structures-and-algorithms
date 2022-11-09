@@ -6,7 +6,7 @@ The queue accepts new dogs or cats and when one is requested, it is removed from
 
 # Whiteboard
 
-[Whiteboard](datastructures/animalQueue.png)
+[Whiteboard](https://github.com/bhlieberman/data-structures-and-algorithms/blob/main/java/datastructures/animalQueue.png)
 
 # Approach and Efficiency
 
