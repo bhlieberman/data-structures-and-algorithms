@@ -1,6 +1,5 @@
 package datastructures.trees;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree {
@@ -33,6 +32,15 @@ public class BinaryTree {
     o.add(n.getValue());
     if (n.rightChild != null) inOrder(n.rightChild, o);
     return o;
+  }
+
+  public int inOrderMax(Node n, List<Integer> o) {
+    if (n.leftChild != null) inOrder(n.leftChild, o);
+    if (o.get(0) < n.getValue()){
+      o.add(n.getValue());
+    }
+    if (n.rightChild != null) inOrder(n.rightChild, o);
+    return o.get(o.size() - 1);
   }
 
 }
