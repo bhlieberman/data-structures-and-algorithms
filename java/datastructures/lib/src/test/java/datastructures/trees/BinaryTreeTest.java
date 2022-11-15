@@ -42,4 +42,21 @@ public class BinaryTreeTest {
     bt.root.leftChild.rightChild = new Node(2);
     assertEquals("[1, 4, 2, 3, 5]", Arrays.toString(bt.inOrder(bt.root, o).toArray()));
   }
+
+  @Test
+  void testBSTAdd() {
+    BinarySearchTree bt = new BinarySearchTree(4, 3, 5);
+    bt.add(1);
+    bt.add(17);
+    assertEquals(17, bt.root.rightChild.rightChild.getValue());
+  }
+
+  @Test
+  void testBSTContains() {
+    BinarySearchTree bst = new BinarySearchTree(4, 3, 5);
+    bst.add(1);
+    bst.add(16);
+    bst.add(7);
+    assert(bst.contains(new Node(7)));
+  }
 }
