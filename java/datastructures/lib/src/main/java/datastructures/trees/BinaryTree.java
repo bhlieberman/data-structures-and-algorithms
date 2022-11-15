@@ -37,6 +37,7 @@ public class BinaryTree {
   public int inOrderMax(Node n, List<Integer> o) {
     if (n.leftChild != null) inOrder(n.leftChild, o);
     if (o.get(0) < n.getValue()){
+      o.remove(0);
       o.add(n.getValue());
     }
     if (n.rightChild != null) inOrder(n.rightChild, o);
