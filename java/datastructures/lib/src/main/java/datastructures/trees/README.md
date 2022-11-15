@@ -13,3 +13,7 @@ I used a recursive approach for the BT methods. This requires O(n) extra space t
 `preOrder(Node n, List<Integer> o)` - this method performs a pre-order traversal of the BT
 `postOrder(Node n, List<Integer> o)` - this method performs a post-order traversal
 `inOrder(Node n, List<Integer> o)` - this method does in-order
+
+Visualization of max find:
+
+[Click here](https://github.com/bhlieberman/data-structures-and-algorithms/blob/main/java/datastructures/btreeMax.png)
