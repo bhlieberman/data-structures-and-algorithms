@@ -12,4 +12,4 @@ This approach to a breadth-first search uses an extra storage array. It requires
 
 ## Visualization
 
-[Click here for visualization]()
+[Click here for visualization](https://github.com/bhlieberman/data-structures-and-algorithms/blob/main/java/datastructures/bfs.png)
