@@ -1,6 +1,9 @@
 package datastructures.trees;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree {
   Node root;
@@ -35,13 +38,26 @@ public class BinaryTree {
   }
 
   public int inOrderMax(Node n, List<Integer> o) {
-    if (n.leftChild != null) inOrder(n.leftChild, o);
+    if (n.leftChild != null) inOrderMax(n.leftChild, o);
     if (o.get(0) < n.getValue()){
       o.remove(0);
       o.add(n.getValue());
     }
-    if (n.rightChild != null) inOrder(n.rightChild, o);
+    if (n.rightChild != null) inOrderMax(n.rightChild, o);
     return o.get(o.size() - 1);
+  }
+
+  public static List<Integer> breadthFirstSearch(BinaryTree bt) {
+    Queue<Node> q = new ArrayDeque<>();
+    List<Integer> al = new ArrayList<>();
+    q.add(bt.root);
+    while (!q.isEmpty()) {
+      Node v = q.poll();
+      al.add(v.getValue());
+      if (v.leftChild != null) q.add(v.leftChild);
+      if (v.rightChild != null) q.add(v.rightChild);
+    }
+    return al;
   }
 
 }
