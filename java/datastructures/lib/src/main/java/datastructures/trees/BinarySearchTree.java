@@ -12,8 +12,8 @@ public class BinarySearchTree extends BinaryTree {
 
   public void add(int n) {
     Node nd = new Node(n);
-    if (this.root != null && n > this.root.getValue()) this.root.rightChild.rightChild = nd;
-    else if (this.root != null && n <= this.root.getValue()) this.root.leftChild.leftChild = nd;
+    if (this.root != null && n > (int) this.root.getValue()) this.root.rightChild.rightChild = nd;
+    else if (this.root != null && n <= (int) this.root.getValue()) this.root.leftChild.leftChild = nd;
   }
 
   public boolean contains(Node n) {

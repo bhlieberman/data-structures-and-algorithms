@@ -81,4 +81,16 @@ public class BinaryTreeTest {
     assertEquals("[2, 7, 5, 2, 6, 9, 5, 11, 4]",
       Arrays.toString(BinaryTree.breadthFirstSearch(bt).toArray()));
   }
+
+  @Test
+  void testKAryTree() {
+    BinaryTree bt = new BinaryTree(2, 3, 5);
+    bt.root.leftChild.leftChild = new Node(2);
+    bt.root.leftChild.rightChild = new Node(6);
+    bt.root.leftChild.rightChild.leftChild = new Node(5);
+    bt.root.leftChild.rightChild.rightChild = new Node(15);
+    bt.root.rightChild.leftChild = new Node(9);
+    bt.root.rightChild.leftChild.rightChild = new Node(4);
+    assert(BinaryTree.kAryTree(bt, bt.root) != null);
+  }
 }
