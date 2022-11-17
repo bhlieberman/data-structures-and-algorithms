@@ -1,22 +1,24 @@
 package datastructures.trees;
 
 public class Node {
-  int val;
+  Object val;
   Node leftChild;
   Node rightChild;
 
-  public Node(int val) {
+  public Node(Object val) {
     this.val = val;
   }
 
-  public Node(int val, Node left, Node right) {
+  public Node(Object val, Node left, Node right) {
     this.val = val;
     this.leftChild = left;
     this.rightChild = right;
   }
 
-  public int getValue() {
+  public Object getValue() {
     return this.val;
   }
+
+  public void setValue(Object val) { this.val = val; }
 
 }
