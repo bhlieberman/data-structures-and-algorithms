@@ -1,12 +1,9 @@
 package datastructures.trees;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class BinaryTree<T> {
-  Node root;
+  public Node root;
 
   public BinaryTree(int val) {
     this.root = new Node(val, new Node(val-1), new Node(val+1));
@@ -58,6 +55,19 @@ public class BinaryTree<T> {
       if (v.rightChild != null) q.add(v.rightChild);
     }
     return al;
+  }
+
+  public static HashMap<Integer, Integer> treeIntersectionFind(HashMap<Integer, Integer> storage, BinaryTree bt) {
+    Queue<Node> q = new ArrayDeque<>();
+    q.add(bt.root);
+    storage.put((int) bt.root.getValue(), 0);
+    while (!q.isEmpty()) {
+      Node v = q.poll();
+      storage.merge((int) v.getValue(), 1, Integer::sum);
+      if (v.leftChild != null) q.add(v.leftChild);
+      if (v.rightChild != null) q.add(v.rightChild);
+    }
+    return storage;
   }
 
   public static BinaryTree kAryTree(BinaryTree bt, Node n) {
