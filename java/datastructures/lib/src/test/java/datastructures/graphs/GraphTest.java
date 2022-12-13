@@ -25,6 +25,23 @@ public class GraphTest {
   }
 
   @Test
+  void testBFS() {
+    Graph graph = new Graph(10);
+    graph.addVertex("Ben");
+    graph.addVertex("Joe");
+    graph.addVertex("Mehtab");
+    graph.addVertex("Max");
+    graph.addVertex("Matt");
+    graph.addEdge(new Vertex("Ben"), new Vertex("Joe"));
+    graph.addEdge(new Vertex("Ben"), new Vertex("Mehtab"));
+    graph.addEdge(new Vertex("Max"), new Vertex("Matt"));
+    graph.addEdge(new Vertex("Matt"), new Vertex("Max"));
+    graph.addEdge(new Vertex("Joe"), new Vertex("Max"));
+    graph.addEdge(new Vertex("Joe"), new Vertex("Mehtab"));
+    assertEquals("[Ben, Joe, Mehtab, Max, Matt]", graph.breadthFirst("Ben").toString());
+  }
+
+  @Test
   void testGetVertices() {
     Graph<String> g = new Graph<>(10);
     g.addVertex("Data science languages");

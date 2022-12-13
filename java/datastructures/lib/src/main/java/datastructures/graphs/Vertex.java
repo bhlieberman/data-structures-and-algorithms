@@ -33,4 +33,9 @@ public class Vertex<T extends Comparable<? super T>> implements Comparable<Verte
   {
     return Objects.hash(value);
   }
+
+  @Override
+  public String toString() {
+    return this.value.toString();
+  }
 }
