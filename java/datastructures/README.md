@@ -18,4 +18,4 @@ This repository contains implementations in Java of various common data structur
 
 [frequency map](https://github.com/bhlieberman/data-structures-and-algorithms/blob/e30d077f12b73097803418dcce847595ece01485/java/datastructures/lib/src/main/java/datastructures/frequency_map/README.md)
 
-[graphs]()
+[graphs](https://github.com/bhlieberman/data-structures-and-algorithms/blob/c7c549eb7edc1158c16951f113ceb136e407b160/java/datastructures/lib/src/main/java/datastructures/graphs/Graphs.md)

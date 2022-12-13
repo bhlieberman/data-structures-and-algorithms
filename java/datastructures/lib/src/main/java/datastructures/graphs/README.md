@@ -8,6 +8,8 @@ Implement a graph data structure. The `Graph` class should provide a constructor
 ## Approach & Efficiency
 I used a `java.util.Hashmap` to represent the adjacency list for my graph. This requires `O(n)` space for the vertices of the graph and provides constant time lookup as a consequence.
 
+The `breadthFirst` method also requires `O(n)` extra space for the Set that contains the visited vertices.
+
 ## API
 `public Vertex<T> addVertex(T value)`: generic method for adding a vertex to the graph given a value of type T.
 
@@ -22,3 +24,5 @@ I used a `java.util.Hashmap` to represent the adjacency list for my graph. This 
 `public int compareTo()`: unimplemented
 
 `public String toString()`: overridden method to return a string representation of the graph's adjacency list.
+
+`public Set<Vertex<T>> breadthFirst(T root)`: performs a breadth-first search of the graph and returns the list of visited vertices.
