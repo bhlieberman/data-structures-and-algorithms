@@ -1,11 +1,21 @@
-# Data Structures
+# Java Data Structures and Algorithms
 
-## Implementation Notes
+This repository contains implementations in Java of various common data structures and algorithms.
 
-## Code Challenges
+## Links
 
-### Challenge 01
+[linked list](https://github.com/bhlieberman/data-structures-and-algorithms/blob/e30d077f12b73097803418dcce847595ece01485/java/datastructures/lib/src/main/java/datastructures/linkedlist/README.md)
 
-Location: `codechallenges/linkedlist/LinkedListChallenges`
+[sorts](https://github.com/bhlieberman/data-structures-and-algorithms/blob/e30d077f12b73097803418dcce847595ece01485/java/datastructures/lib/src/main/java/datastructures/sorts/insertionSort.md)
 
-Method: `linkedListChallenge06()`
+[stacks and queues](https://github.com/bhlieberman/data-structures-and-algorithms/blob/e30d077f12b73097803418dcce847595ece01485/java/datastructures/lib/src/main/java/datastructures/stack_and_queue/README.md)
+
+[tree intersection](https://github.com/bhlieberman/data-structures-and-algorithms/blob/e30d077f12b73097803418dcce847595ece01485/java/datastructures/lib/src/main/java/datastructures/tree_intersection/README.md)
+
+[trees](https://github.com/bhlieberman/data-structures-and-algorithms/blob/e30d077f12b73097803418dcce847595ece01485/java/datastructures/lib/src/main/java/datastructures/trees/README.md)
+
+[hash table](https://github.com/bhlieberman/data-structures-and-algorithms/blob/e30d077f12b73097803418dcce847595ece01485/java/datastructures/lib/src/main/java/datastructures/hashtable/HashTable.md)
+
+[frequency map](https://github.com/bhlieberman/data-structures-and-algorithms/blob/e30d077f12b73097803418dcce847595ece01485/java/datastructures/lib/src/main/java/datastructures/frequency_map/README.md)
+
+[graphs]()
