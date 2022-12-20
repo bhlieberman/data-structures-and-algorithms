@@ -10,4 +10,4 @@ This class exposes a single method: `treeIntersection`. It returns a set of the 
 
 This method of finding the intersection of two binary trees requires O(2n) space (for the hashmap and keySet) and O(2n) time for each traversal.
 
-![Visualization](./whiteboard.png)
+![Visualization](https://github.com/bhlieberman/data-structures-and-algorithms/blob/main/java/datastructures/whiteboard.png)
